@@ -1,0 +1,29 @@
+
+
+<table class="table"  >
+    <h1>Register list</h1>
+    <a href="/adduser"> <button style="margin: 10px;" class="btn btn-primary ml-auto">Add user</button></a>
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">City</th>
+      <th scope="col">Edit</th>
+      <th scope="col">delete</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each rows}}
+          <tr>
+      <td>{{this.NAME}}</td>
+      <td>{{this.AGE}}</td>
+      <td>{{this.CITY}}</td>
+      <td><a href="/edituser/{{this.ID}}">Edit</a></td>
+      <td><a href="/delete/{{this.ID}}">Delete</a></td>
+    
+    </tr>
+      {{/each}}
+
+ 
+  </tbody>
+</table>
